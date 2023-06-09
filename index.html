@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Marks Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="margin">
+  <div class="container">
+    <div id="comsats-div">
+      <img src="./src/comsats.png" id="comsats">
+    </div>
+    <h1>COMSATS Internal Marks Calculator</h1>
+    <form id="marksForm">
+      <h2>Quizzes</h2>
+      <p id="p">Enter Quizzes Marks out of 10</p>
+      <input type="number" id="quiz1" required placeholder="Quiz 1" br>
+      <input type="number" id="quiz2" required placeholder="Quiz 2" br>
+      <input type="number" id="quiz3" required placeholder="Quiz 3" br>
+      <input type="number" id="quiz4" required placeholder="Quiz 4" br>
+
+      <h2>Assignments</h2>
+      <p id="p">Enter Assignment Marks out of 10</p>
+
+      <input type="number" id="assignment1" required placeholder="Assignment 1"><br>
+      <input type="number" id="assignment2" required placeholder="Assignment 2"><br>
+      <input type="number" id="assignment3" required placeholder="Assignment 3"><br>
+      <input type="number" id="assignment4" required placeholder="Assignment 4"><br>
+
+      <h2>Mid-term Exam</h2>
+      <p id="p">Enter Mid Exam Marks out of 25</p>
+      <input type="number" id="midterm" required placeholder="Mids Marks"><br>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <h2>Results</h2>
+    <p id="totalMarks"></p>
+
+    <footer>
+      <p>Contact at <b>muquitarif2@gmail.com</b> for any Feedback.</p>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
