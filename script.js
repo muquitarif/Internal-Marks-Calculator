@@ -39,7 +39,7 @@
       const assignmentMarks = ((assignment1 + assignment2 + assignment3 + assignment4) / 40) * 10;
       const totalMarks = quizMarks + assignmentMarks + midterm;
 
-      totalMarksElement.textContent = `Total Marks: ${totalMarks}`;
+      totalMarksElement.textContent = `Total Marks: ${totalMarks} / 50`;
 
      marksForm.reset();
 });
