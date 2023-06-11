@@ -1,6 +1,16 @@
  const marksForm = document.getElementById('marksForm');
     const totalMarksElement = document.getElementById('totalMarks');
 
+function notify(type, message) {
+    var msg = new Notyf();
+
+    if (type == "success") {
+        msg.success(message);
+    } else {
+        msg.error(message);
+    }
+}
+
     marksForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
@@ -18,19 +28,19 @@
 
      // Check if quiz marks are within range
   if (quiz1 < 0 || quiz1 > 10 || quiz2 < 0 || quiz2 > 10 || quiz3 < 0 || quiz3 > 10 || quiz4 < 0 || quiz4 > 10) {
-    totalMarksElement.textContent = "Invalid quiz marks. Please enter marks between 0 and 10.";
+      notify("error", "Invalid quiz marks. Please enter marks between 0 and 10.");
     return;
   }
 
   // Check if assignment marks are within range
   if (assignment1 < 0 || assignment1 > 10 || assignment2 < 0 || assignment2 > 10 || assignment3 < 0 || assignment3 > 10 || assignment4 < 0 || assignment4 > 10) {
-    totalMarksElement.textContent = "Invalid assignment marks. Please enter marks between 0 and 10.";
+      notify("error", "Invalid Assignment marks. Please enter marks between 0 and 10.");
     return;
   }
 
   // Check if midterm marks are within range
   if (midterm < 0 || midterm > 25) {
-    totalMarksElement.textContent = "Invalid midterm marks. Please enter marks between 0 and 25.";
+      notify("error", "Invalid midterm marks. Please enter marks between 0 and 25.");
     return;
   }
 
